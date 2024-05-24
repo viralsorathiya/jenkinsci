@@ -1,0 +1,12 @@
+sed -i 's|<description></description>|<description>${job_name} job</description>|' job-template.xml
+sed -i 's|<string>start</string>|<string>${action}</string>|' job-template.xml
+sed -i 's|<string>us-west-2</string>|<string>${region}</string>|' job-template.xml
+sed -i 's|<string>dev</string>|<string>${env_type}</string>|' job-template.xml
+sed -i 's|<string>nc-dev-risk</string>|<string>${aws_account}</string>|' job-template.xml
+sed -i 's|<string>nc</string>|<string>${config}</string>|' job-template.xml
+sed -i 's|<string>k8s</string>|<string>${app_code}</string>|' job-template.xml
+sed -i 's|<defaultValue>70</defaultValue>|<defaultValue>${list_env_num}</defaultValue>|' job-template.xml
+sed -i 's|<spec>H/15 \* \* \* 1</spec>|<spec>${cron}</spec>|' job-template.xml
+sed -i 's|<url>git@github.</url>|<url>${repo_url}</url>|' job-template.xml
+sed -i 's|<credentialsId>d3844c55-7e22-4786-a07d-7a7789ad0f36</credentialsId>|<credentialsId>${credentials_id}</credentialsId>|' job-template.xml
+sed -i 's|<name>\*/main</name>|<name>${branch}</name>|' job-template.xml
